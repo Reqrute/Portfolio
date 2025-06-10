@@ -1,0 +1,37 @@
+{
+  "name": "Projects",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "author": "Roman Lyakh <ctarewer@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@4.9.2",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-typescript": "^7.27.1",
+    "@eslint/js": "^9.28.0",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
+    "babel-loader": "^10.0.0",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.1",
+    "html-webpack-plugin": "^5.6.3",
+    "lint-staged": "^16.1.0",
+    "prettier": "^3.5.3",
+    "simple-git-hooks": "^2.13.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
