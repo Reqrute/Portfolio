@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Gill Sans Extrabold", sans-serif;
+    font-family:'Space Mono', monospace;
   }
 
   html, body {
@@ -25,4 +25,36 @@
 
   #root {
     display: flex;
+    place-items: center;
+    justify-content: center;
+    color: white;
+    background: black;
+    
   }
+
+/* Header component */
+
+  .container {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  }
+
+  .hackedHeader {
+  text-align: center;
+  font-size: clamp(2rem, 10vw, 8rem);
+  color: white;
+  padding: 0rem clamp(0.5rem, 2vw, 2rem);
+  border-radius: clamp(0.2rem, 0.75vw, 1rem);
+
+  max-width: 100%;
+  word-wrap: break-word;
+  white-space: normal;
+  box-sizing: border-box;
+
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}

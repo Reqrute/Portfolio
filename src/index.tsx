@@ -1,9 +1,11 @@
 import { createRoot } from 'react-dom/client';
-
+import Header from './components/header';
 import './styles/main.css';
 
 const App = () => {
-  return <h1></h1>;
+  return <>
+    <Header/>
+  </>;
 };
 
 const root = createRoot(document.getElementById('root')!);
