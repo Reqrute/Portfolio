@@ -1,5 +1,10 @@
 import { createRoot } from 'react-dom/client';
 
-const App = () => <h1>Hello, world!</h1>;
+import './styles/main.css';
 
-createRoot(document.getElementById('root')!).render(<App />);
+const App = () => {
+  return <h1></h1>;
+};
+
+const root = createRoot(document.getElementById('root')!);
+root.render(<App />);

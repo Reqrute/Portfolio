@@ -1,5 +1,5 @@
 {
-  "name": "Projects",
+  "name": "projects",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
@@ -11,16 +11,22 @@
     "react-dom": "^19.1.0"
   },
   "scripts": {
+    "dev": "webpack serve --config webpack.config.js",
+    "build": "webpack --config webpack.config.js",
     "lint": "eslint . --ext .ts,.tsx"
   },
   "devDependencies": {
     "@babel/core": "^7.27.4",
     "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
     "@eslint/js": "^9.28.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
     "@typescript-eslint/eslint-plugin": "^8.34.0",
     "@typescript-eslint/parser": "^8.34.0",
     "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.1",
@@ -28,6 +34,7 @@
     "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
     "simple-git-hooks": "^2.13.0",
+    "style-loader": "^4.0.0",
     "ts-loader": "^9.5.2",
     "typescript": "^5.8.3",
     "webpack": "^5.99.9",
