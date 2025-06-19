@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
+import "../styles/header.css"
+
 export default function Header() {
   const originalText:string = "Welcome to the page";
 

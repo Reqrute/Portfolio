@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import "../styles/navigation.css"
+
 export default function HoverSidebar() {
   const [visible, setVisible] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
