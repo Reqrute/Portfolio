@@ -3,6 +3,8 @@ import Header from './components/header';
 import './styles/main.css';
 import HoverSidebar from './components/navigation';
 import TicTacToe from './components/games/Tictactoe';
+import SnakeGame from './components/games/Snake';
+import SliderPuzzle from './components/games/Slider';
 
 
 const App = () => {
@@ -10,6 +12,8 @@ const App = () => {
     <HoverSidebar/>
     <Header/>
     <TicTacToe/>
+    <SnakeGame/>
+    <SliderPuzzle/>
   </>;
 };
 
