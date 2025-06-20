@@ -30,4 +30,5 @@
     flex-direction: column;
     background: black;
     color: white;
+    user-select: none;
   }

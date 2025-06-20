@@ -5,6 +5,8 @@ import HoverSidebar from './components/navigation';
 import TicTacToe from './components/games/Tictactoe';
 import SnakeGame from './components/games/Snake';
 import SliderPuzzle from './components/games/Slider';
+import HoverCards from './components/interactive/cards';
+
 
 
 const App = () => {
@@ -14,6 +16,7 @@ const App = () => {
     <TicTacToe/>
     <SnakeGame/>
     <SliderPuzzle/>
+    <HoverCards/>
   </>;
 };
 
