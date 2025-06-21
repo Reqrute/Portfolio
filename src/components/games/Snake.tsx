@@ -17,13 +17,13 @@ export default function SnakeGame() {
   const [gameStarted, setGameStarted] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [tick, setTick] = useState(0);
-  const [isPaused, setIsPaused] = useState(false); // 🆕
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     if (!gameStarted || gameOver || isPaused) return;
     const interval = setInterval(() => setTick((t) => t + 1), SPEED);
     return () => clearInterval(interval);
-  }, [gameStarted, gameOver, isPaused]); // 🆕
+  }, [gameStarted, gameOver, isPaused]);
 
   useEffect(() => {
     if (!gameStarted || gameOver || isPaused) return;
@@ -69,7 +69,7 @@ export default function SnakeGame() {
 
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [direction, nextDirections, gameStarted, gameOver, isPaused]); // 🆕
+  }, [direction, nextDirections, gameStarted, gameOver, isPaused]);
 
   useEffect(() => {
     if (gameStarted && food === null) {

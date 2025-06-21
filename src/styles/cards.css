@@ -10,7 +10,6 @@
   box-sizing: border-box;
 }
 
-/* Общий стиль карточки */
 .card {
   justify-self: center;
   background-color: rgba(255, 255, 255, 0.1);
@@ -28,7 +27,6 @@
   transform: scale(1.02);
 }
 
-/* Эффекты свечения */
 .card::before,
 .card::after {
   content: "";
@@ -71,7 +69,6 @@
   z-index: 1;
 }
 
-/* Внутреннее содержимое карточки */
 .card > .card-content {
   background-color: #171717;
   border-radius: inherit;
@@ -84,7 +81,6 @@
   z-index: 2;
 }
 
-/* Визуал контента */
 .card-image {
   align-items: center;
   display: flex;
@@ -129,7 +125,6 @@
   margin: 8px 0 0 0;
 }
 
-/* Адаптив */
 @media (max-width: 1000px) {
   #cards {
     flex-direction: row;
