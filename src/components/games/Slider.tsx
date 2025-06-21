@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "../../styles/slider.css";
 
 const imageURL =
-  "https://images.unsplash.com/photo-1749989315513-946c33cdefb5?q=80&w=784&auto=format&fit=crop&ixlib=rb-4.1.0";
+  "https://images.unsplash.com/photo-1745933115134-9cd90e3efcc7?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
 export default function SliderPuzzle() {
   const [size, setSize] = useState(3);
@@ -15,6 +15,12 @@ export default function SliderPuzzle() {
   useEffect(() => {
     generateBoard();
   }, [size]);
+
+  useEffect(() => {
+  if (tiles.length && isSolvedBoard(tiles)) {
+    setIsSolved(true);
+  }
+}, [tiles]);
 
   const generateBoard = () => {
     const initial = [...Array(totalTiles).keys()];
@@ -40,19 +46,26 @@ export default function SliderPuzzle() {
   const isSolvedBoard = (arr: number[]) =>
     arr.every((val, idx) => val === idx);
 
-  const isSolvable = (arr: number[]) => {
-    let invCount = 0;
-    for (let i = 0; i < arr.length; i++) {
-      for (let j = i + 1; j < arr.length; j++) {
-        if (arr[i] !== totalTiles - 1 && arr[j] !== totalTiles - 1 && arr[i] > arr[j]) {
-          invCount++;
-        }
+const isSolvable = (arr: number[]) => {
+  const invCount = arr.reduce((acc, curr, i) => {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (curr !== totalTiles - 1 && arr[j] !== totalTiles - 1 && curr > arr[j]) {
+        acc++;
       }
     }
-    if (size % 2 === 1) return invCount % 2 === 0;
-    const emptyRow = Math.floor(arr.indexOf(totalTiles - 1) / size);
-    return (invCount + size - emptyRow) % 2 === 0;
-  };
+    return acc;
+  }, 0);
+
+  const emptyRow = Math.floor(arr.indexOf(totalTiles - 1) / size);
+  const emptyRowFromBottom = size - emptyRow;
+
+  if (size % 2 === 1) {
+    return invCount % 2 === 0;
+  } else {
+    return (invCount + emptyRowFromBottom) % 2 === 1;
+  }
+};
+
 
   const handleTileClick = (index: number) => {
     if (isSolved) return;
@@ -71,7 +84,6 @@ export default function SliderPuzzle() {
       [newTiles[index], newTiles[emptyIndex]] = [newTiles[emptyIndex], newTiles[index]];
       setTiles(newTiles);
       setEmptyIndex(index);
-      if (isSolvedBoard(newTiles)) setIsSolved(true);
     }
   };
 
