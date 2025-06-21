@@ -6,6 +6,10 @@ import TicTacToe from './components/games/Tictactoe';
 import SnakeGame from './components/games/Snake';
 import SliderPuzzle from './components/games/Slider';
 import HoverCards from './components/interactive/cards';
+import Slider from "./components/interactive/Slider"
+import Accordion from './components/interactive/Accordion';
+
+
 
 
 
@@ -17,6 +21,8 @@ const App = () => {
     <SnakeGame/>
     <SliderPuzzle/>
     <HoverCards/>
+    <Slider/>
+    <Accordion/>
   </>;
 };
 
