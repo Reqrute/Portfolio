@@ -31,4 +31,5 @@
     background: black;
     color: white;
     user-select: none;
+    scroll-behavior: smooth;
   }

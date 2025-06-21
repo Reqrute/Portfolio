@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/accordion.css';
 
-const cats = [
+const characters = [
   {
     title: 'Luffy',
     img: 'https://i.pinimg.com/736x/d9/9e/aa/d99eaa8760e73d13b835acecbf5fe888.jpg',
@@ -26,11 +26,11 @@ const cats = [
 
 const Accordion: React.FC = () => {
   return (
-    <div className="cat-container">
-      {cats.map((cat, idx) => (
-        <div className="cat-card" key={idx}>
-          <img src={cat.img} alt={cat.title} />
-          <div className="cat-card__head">{cat.title}</div>
+    <div className="pers-container" id="accordion">
+      {characters.map((pers, idx) => (
+        <div className="pers-card" key={idx}>
+          <img src={pers.img} alt={pers.title} />
+          <div className="pers-card__head">{pers.title}</div>
         </div>
       ))}
     </div>

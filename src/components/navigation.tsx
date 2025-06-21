@@ -7,10 +7,13 @@ export default function HoverSidebar() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const items = [
-    { label: "Up", href: "#home" },
-    { label: "Games", href: "#about" },
-    { label: "Interactive", href: "#services" },
-    { label: "Tables", href: "#contact" },
+    { label: "Begin", href: "#head" },
+    { label: "TicTacToe", href: "#TicTacToe" },
+    { label: "Snake game", href: "#snake" },
+    { label: "Slider game", href: "#slider-game" },
+    { label: "Cards", href: "#cards" },
+    { label: "Slider", href: "#slider" },
+    { label: "Accordion", href: "#accordion" },
   ];
 
   return (

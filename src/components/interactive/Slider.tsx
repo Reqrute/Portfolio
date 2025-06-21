@@ -40,7 +40,7 @@ const Slider: React.FC = () => {
   }, [index]); 
 
   return (
-    <div className="sb-slider">
+    <div className="sb-slider" id="slider">
       <div className="sb-slide" key={blinkKey}>
         <h2>{slides[index].title}</h2>
         <img src={slides[index].img} alt={slides[index].title} />

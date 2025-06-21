@@ -46,7 +46,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container" id="head">
       <h1 className="hackedHeader" onMouseOver={handleOver}>
         {value}
       </h1>

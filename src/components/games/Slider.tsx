@@ -88,7 +88,7 @@ const isSolvable = (arr: number[]) => {
   };
 
   return (
-    <div className="slider-game">
+    <div className="slider-game" id="slider-game">
       <h2>Скользящая головоломка</h2>
 
       <div className="controls">

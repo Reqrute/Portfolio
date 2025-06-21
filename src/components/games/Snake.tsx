@@ -152,7 +152,7 @@ export default function SnakeGame() {
   };
 
   return (
-    <div className="snake-game">
+    <div className="snake-game" id="snake">
       <h2>Игра Змейка</h2>
 
       {!gameStarted ? (

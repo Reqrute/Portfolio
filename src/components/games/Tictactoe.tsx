@@ -145,7 +145,7 @@ export default function TicTacToe() {
   };
 
   return (
-    <div className="game">
+    <div className="game" id="TicTacToe">
       <h2>Крестики-нолики с ИИ</h2>
 
       <label className="difficulty-label">
