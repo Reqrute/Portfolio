@@ -1,0 +1,27 @@
+.container {
+  height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .hackedHeader {
+  font-size: clamp(2rem, 10vw, 8rem);
+  color: white;
+  padding: 0rem clamp(0.5rem, 2vw, 2rem);
+  border-radius: clamp(0.2rem, 0.75vw, 1rem);
+
+  max-width: 100%;
+  word-wrap: break-word;
+  white-space: normal;
+  box-sizing: border-box;
+
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
